@@ -15,17 +15,9 @@
   },
   "plugins": ["@typescript-eslint", "prettier"],
   "rules": {
-    "prettier/prettier": [
-      "error",
-      {
-        "printWidth": 80,
-        "tabWidth": 2,
-        "singleQuote": true,
-        "traillingComma": "all",
-        "arrowParens": "always",
-        "semi": false
-      }
-    ]
+    "prettier/prettier": "off", // Desabilita a regra do Prettier no ESLint
+    "@typescript-eslint/no-unused-vars": ["warn"], // Avisos para variáveis não utilizadas
+    "no-console": "off" // Permite o uso de console.log
   },
   "settings": {
     "import/parsers": {

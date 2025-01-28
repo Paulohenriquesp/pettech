@@ -17,7 +17,9 @@
   "rules": {
     "prettier/prettier": "off", // Desabilita a regra do Prettier no ESLint
     "@typescript-eslint/no-unused-vars": ["warn"], // Avisos para variáveis não utilizadas
-    "no-console": "off" // Permite o uso de console.log
+    "no-console": "off", // Permite o uso de console.log
+    "camelcase": "off",
+    "no-useless-constructor": "off"
   },
   "settings": {
     "import/parsers": {

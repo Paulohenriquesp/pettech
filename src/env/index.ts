@@ -7,6 +7,11 @@ const envSchema = z.object({
     .enum(['development', 'production', 'test'])
     .default('development'),
   PORT: z.coerce.number().default(3000),
+  DATABASE_USER: z.string(),
+  DATABASE_HOST: z.string(),
+  DATABASE_NAME: z.string(),
+  DATABASE_PORT: z.coerce.number(),
+  DATABASE_PASSWORD: z.string(),
 })
 
 const _env = envSchema.safeParse(process.env)

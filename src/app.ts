@@ -3,7 +3,7 @@ import { personRoutes } from '@/http/controllers/person/routes'
 import { userRoutes } from './http/controllers/user/routes'
 import { ZodError } from 'zod'
 import { env } from './env'
-import { ResourceNotFoundError } from './use-cases/errors/resource-not-fundo-error'
+import { ResourceNotFoundError } from './use-cases/errors/resource-not-found-error'
 
 export const app = fastify()
 

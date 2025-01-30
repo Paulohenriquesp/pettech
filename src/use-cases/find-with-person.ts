@@ -1,7 +1,7 @@
 import { Person } from '@/entities/person.entity'
 import { User } from '@/entities/user.entity'
 import { UserRepository } from '@/repositories/user.repository'
-import { ResourceNotFoundError } from './errors/resource-not-fundo-error'
+import { ResourceNotFoundError } from './errors/resource-not-found-error'
 
 export class FindWithPersonUseCase {
   constructor(private userRepository: UserRepository) {}

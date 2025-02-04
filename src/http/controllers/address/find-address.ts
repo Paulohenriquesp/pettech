@@ -16,7 +16,7 @@ export async function findAddress(
   })
 
   const { personId } = registerParamsSchema.parse(request.params)
-  const { page, limit } = registerQuerySchema.parse(request.params)
+  const { page, limit } = registerQuerySchema.parse(request.query)
 
   const findAddressByPersonUseCase = makeFindAddressByPersonUseCase()
 

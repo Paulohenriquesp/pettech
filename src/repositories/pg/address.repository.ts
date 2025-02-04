@@ -2,6 +2,7 @@ import { IAddressRepository } from '../address.repository.interface'
 import { database } from '@/lib/pg/db'
 import { IAddress } from '@/entities/models/address.interface'
 import { IPerson } from '@/entities/models/person.interface'
+import { Address } from '@/entities/address.entity'
 
 export class AddressRepository implements IAddressRepository {
   async findAddressByPersonId(

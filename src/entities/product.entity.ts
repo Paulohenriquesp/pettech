@@ -13,6 +13,7 @@ import { Category } from './category.entity'
   name: 'product',
 })
 export class Product implements IProduct {
+  image_url: string
   @PrimaryGeneratedColumn('uuid', {
     name: 'id',
   })
@@ -34,7 +35,7 @@ export class Product implements IProduct {
     name: 'image_url',
     type: 'varchar',
   })
-  image_url: string
+  image: string
 
   @Column({
     name: 'price',
@@ -56,5 +57,5 @@ export class Product implements IProduct {
       referencedColumnName: 'id',
     },
   })
-  category?: ICategory[] | undefined
+  categories?: ICategory[] | undefined
 }

@@ -2,7 +2,7 @@ import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm'
 import { ICategory } from './models/category.interface'
 
 @Entity({
-  name: 'Category',
+  name: 'category',
 })
 export class Category implements ICategory {
   @PrimaryGeneratedColumn('increment', {
@@ -17,9 +17,9 @@ export class Category implements ICategory {
   name: string
 
   @Column({
-    name: 'create_at',
+    name: 'creation_date',
     type: 'timestamp without time zone',
     default: () => 'CURRENT_TIMESTAMP',
   })
-  createAt: Date
+  createdAt: Date
 }

@@ -4,6 +4,6 @@ export class DeleteProductUseCase {
   constructor(private productRepository: IProductRepository) {}
 
   async handler(id: string): Promise<void> {
-    await this.productRepository.delete(id)
+    return this.productRepository.delete(id)
   }
 }

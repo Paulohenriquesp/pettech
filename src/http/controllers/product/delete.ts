@@ -1,5 +1,5 @@
 import { makeDeleteProductUseCase } from '@/use-cases/factory/make-delete-product-use-case'
-import { FastifyRequest, FastifyReply } from 'fastify'
+import { FastifyReply, FastifyRequest } from 'fastify'
 import { z } from 'zod'
 
 export async function deleteProduct(

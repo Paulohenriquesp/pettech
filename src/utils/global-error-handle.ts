@@ -1,4 +1,5 @@
 import { env } from '@/env'
+import { InvalidCredentialsError } from '@/use-cases/errors/invalid-credentials-error'
 import { FastifyReply, FastifyRequest } from 'fastify'
 import { ZodError } from 'zod'
 
@@ -18,6 +19,9 @@ export const errorHandlerMap: ErrorHandlerMap = {
     })
   },
   ResourceNotFoundError: (error, __, reply) => {
+    return reply.status(404).send({ message: error.message })
+  },
+  InvalidCredentialsError: (error, __, reply) => {
     return reply.status(404).send({ message: error.message })
   },
 }
